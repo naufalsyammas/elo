@@ -1,148 +1,120 @@
-/* Reset dasar */
+/* ========== RESET ========== */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
 }
 
-/* Body dan font */
 body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  color: #333;
+    background: #ffeef8; /* pink pastel lembut seperti situs asli */
+    color: #333;
 }
 
-/* Navigasi */
-#navbar {
-  background-color: #fff;
-  padding: 1rem;
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  position: fixed;
-  width: 100%;
-  top: 0;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  z-index: 1000;
-}
-#navbar a {
-  text-decoration: none;
-  color: #333;
-  font-weight: bold;
-}
-#navbar a:hover {
-  color: #007BFF;
+/* ========== CONTAINER ========== */
+.container {
+    width: 90%;
+    max-width: 900px;
+    margin: auto;
 }
 
-/* Hero / Home section */
-.hero {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding-top: 4rem; /* agar tidak tertutup nav */
-  background-color: #f5f5f5;
-}
-.hero h1 {
-  font-size: 3rem;
-  margin-bottom: 1rem;
-}
-.hero p {
-  font-size: 1.5rem;
+/* ========== HEADER / PROFIL ========== */
+header {
+    padding: 50px 0;
+    text-align: center;
 }
 
-/* About */
-#about {
-  padding: 4rem 2rem;
-  background: #fff;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-#about img {
-  width: 150px;
-  border-radius: 50%;
-  margin-top: 1rem;
-}
-#about p {
-  max-width: 600px;
-  text-align: center;
-  margin-top: 1rem;
+.profil-box {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(255, 105, 180, 0.2);
 }
 
-/* Projects */
-#projects {
-  padding: 4rem 2rem;
-  background: #f9f9f9;
-}
-.project-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
-}
-.project-item {
-  background: #fff;
-  padding: 1rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  text-align: center;
-}
-.project-item img {
-  width: 100%;
-  height: auto;
-  border-radius: 4px;
-}
-.project-item h3 {
-  margin: 1rem 0 0.5rem;
-}
-.project-item p {
-  font-size: 0.9rem;
-  color: #666;
-}
-.project-item a {
-  display: inline-block;
-  margin-top: 0.5rem;
-  color: #007BFF;
-  text-decoration: none;
-}
-.project-item a:hover {
-  text-decoration: underline;
+.foto {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border: 4px solid #ffb6d9;
 }
 
-/* Contact */
-#contact {
-  padding: 4rem 2rem;
-  background: #fff;
-  text-align: center;
-}
-#contact a {
-  color: #007BFF;
-  text-decoration: none;
-}
-#contact a:hover {
-  text-decoration: underline;
+.profil-box h1 {
+    font-size: 24px;
+    color: #d14fa4;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
-/* Footer */
+.profil-box p {
+    color: #555;
+    font-size: 15px;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.profil-box a {
+    display: block;
+    margin-top: 15px;
+    font-size: 15px;
+    color: #555;
+    line-height: 1.7;
+}
+
+/* ========== SECTION TITLE ========== */
+.judul-section {
+    text-align: center;
+    font-size: 26px;
+    margin-bottom: 25px;
+    color: #d14fa4;
+    font-weight: 600;
+}
+
+/* ========== CARD / HOBI ========== */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(255, 105, 180, 0.25);
+    text-align: center;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(255, 105, 180, 0.35);
+}
+
+.card h3 {
+    margin-bottom: 10px;
+    color: #d14fa4;
+    font-size: 20px;
+}
+
+.card p {
+    color: #555;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+/* ========== CONTACT ========== */
+#contact .card {
+    max-width: 500px;
+    margin: auto;
+}
+
+/* ========== FOOTER ========== */
 footer {
-  text-align: center;
-  padding: 2rem;
-  background: #f5f5f5;
-  margin-top: 2rem;
-}
-
-/* Responsif */
-@media (max-width: 768px) {
-  .hero h1 {
-    font-size: 2.5rem;
-  }
-  .hero p {
-    font-size: 1.2rem;
-  }
-  #navbar {
-    flex-direction: column;
-    gap: 1rem;
-  }
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 30px;
+    color: #777;
+    font-size: 14px;
 }
